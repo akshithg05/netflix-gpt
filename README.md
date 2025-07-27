@@ -3,7 +3,10 @@
 1. Created vite app - npm create vite@latest netflix-gpt
 2. Installed and configured tailwind css.
 3. Header
-4. Login form
+4. Routing App
+5. Login form / Sign Up form
+6. Form Validation
+7. useRef hook
 
 # Features -
 
