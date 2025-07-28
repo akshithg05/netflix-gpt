@@ -1,12 +1,14 @@
 import { useState, useRef } from "react";
-import { validateEmailAndPassword } from "../../utils/validate";
+import { validateEmailAndPassword, validateName } from "../../utils/validate";
 
 export default function LoginForm() {
   const [signUp, setSignUp] = useState(false);
+  const [nameValidation, setNameValidation] = useState(true);
   const [validation, setValidation] = useState({});
 
   const email = useRef(null);
   const password = useRef(null);
+  const name = useRef(null);
 
   const handleFormSubmit = () => {
     const result = validateEmailAndPassword(
@@ -14,15 +16,20 @@ export default function LoginForm() {
       password.current.value
     );
 
-    console.log(result);
+    const isNameValid = signUp
+      ? validateName(name.current.value, signUp)
+      : true;
+    setNameValidation(isNameValid);
     setValidation(result);
 
     if (result.isValid) {
       email.current.value = "";
       password.current.value = "";
+      name.current.value = "";
     }
   };
 
+  console.log(nameValidation);
   return (
     <div className="w-3/12 absolute pl-8 pr-13 pb-10 pt-7 bg-black/85 rounded-sm my-50 mx-auto left-0 right-0">
       <h1 className="text-white p-2 text-2xl pb-4 font-bold">
@@ -36,11 +43,17 @@ export default function LoginForm() {
         }}
       >
         {signUp && (
-          <input
-            className="mx-2 my-4 p-4 bg-gray-700 text-white rounded-sm w-full"
-            placeholder="Full Name"
-            type="text"
-          />
+          <>
+            <input
+              ref={name}
+              className="mx-2 my-4 p-4 bg-gray-700 text-white rounded-sm w-full"
+              placeholder="Full Name"
+              type="text"
+            />
+            {!nameValidation && (
+              <p className="mx-2 text-red-600">Name cannot be empty</p>
+            )}
+          </>
         )}
 
         <input

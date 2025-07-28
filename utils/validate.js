@@ -29,3 +29,9 @@ export function validateEmailAndPassword(email, password) {
 
   return validation;
 }
+
+export function validateName(name) {
+  // Name should not be empty or only contain whitespaces
+  const nameRegex = /^\s*$/;
+  return !nameRegex.test(name);
+}
