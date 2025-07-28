@@ -7,6 +7,9 @@
 5. Login form / Sign Up form
 6. Form Validation
 7. useRef hook
+8. Firebase setup
+9. Firebase deployment to production
+10. Create sign up user in firebase
 
 # Features -
 
