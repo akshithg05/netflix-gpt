@@ -10,6 +10,9 @@
 8. Firebase setup
 9. Firebase deployment to production
 10. Create sign up user in firebase
+11. Implement sign in user API
+12. Created redux store with userSlice
+
 
 # Features -
 

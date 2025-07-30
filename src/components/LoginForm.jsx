@@ -5,8 +5,10 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import { auth } from "../../utils/firebase";
+import { useNavigate } from "react-router-dom";
 
 export default function LoginForm() {
+  const navigate = useNavigate();
   const [signUp, setSignUp] = useState(false);
   const [nameValidation, setNameValidation] = useState(true);
   const [validation, setValidation] = useState({});
@@ -48,6 +50,7 @@ export default function LoginForm() {
           // Signed up
           const user = userCredential.user;
           console.log(user);
+          navigate("/browse");
           setIsLoading(false);
         })
         .catch((error) => {
@@ -77,6 +80,7 @@ export default function LoginForm() {
           // Signed in
           const user = userCredential.user;
           console.log(user);
+          navigate("/browse");
           setIsLoading(false);
         })
         .catch((error) => {
