@@ -12,7 +12,9 @@
 10. Create sign up user in firebase
 11. Implement sign in user API
 12. Created redux store with userSlice
-
+13. Implemented Sign out
+14. UpdateProfile API call
+15. Fetch movies from TMDB.
 
 # Features -
 

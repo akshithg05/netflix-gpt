@@ -3,12 +3,17 @@ import { validateEmailAndPassword, validateName } from "../../utils/validate";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  updateProfile,
 } from "firebase/auth";
 import { auth } from "../../utils/firebase";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addUser } from "../../store/userSlice";
 
 export default function LoginForm() {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
   const [signUp, setSignUp] = useState(false);
   const [nameValidation, setNameValidation] = useState(true);
   const [validation, setValidation] = useState({});
@@ -49,9 +54,29 @@ export default function LoginForm() {
         .then((userCredential) => {
           // Signed up
           const user = userCredential.user;
-          console.log(user);
-          navigate("/browse");
-          setIsLoading(false);
+          updateProfile(user, {
+            displayName: name.current.value,
+            photoURL: "https://avatars.githubusercontent.com/u/90089033?v=4",
+          })
+            .then(() => {
+              // using auth.currentUser instead of user because photoURL and displayName of user
+              // is not yet updated. We need to get the current user from auth
+              const { uid, email, displayName, photoURL } = auth.currentUser;
+              dispatch(
+                addUser({
+                  uid: uid,
+                  email: email,
+                  displayName: displayName,
+                  photoURL: photoURL,
+                })
+              );
+              navigate("/browse");
+              setIsLoading(false);
+            })
+            .catch((error) => {
+              setError(true);
+              setErrorMessage(error);
+            });
         })
         .catch((error) => {
           const errorCode = error.code;

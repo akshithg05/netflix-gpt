@@ -3,7 +3,6 @@ import Body from "./components/Body";
 import { Provider } from "react-redux";
 
 function App() {
-  console.log(appStore);
   return (
     <Provider store={appStore}>
       <div className="min-h-screen bg-black text-white">
