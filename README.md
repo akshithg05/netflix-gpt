@@ -15,6 +15,10 @@
 13. Implemented Sign out
 14. UpdateProfile API call
 15. Fetch movies from TMDB.
+16. Update display name.
+17. Bug fix - if user is not logged in redirect to login page and vice versa for browse page
+18. Unsubscribed to the onAuthStateChanged callback.
+19. Add constants file.
 
 # Features -
 

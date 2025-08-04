@@ -6,12 +6,11 @@ import {
   updateProfile,
 } from "firebase/auth";
 import { auth } from "../../utils/firebase";
-import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser } from "../../store/userSlice";
+import { USER_DP } from "../../utils/constants";
 
 export default function LoginForm() {
-  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const [signUp, setSignUp] = useState(false);
@@ -56,7 +55,7 @@ export default function LoginForm() {
           const user = userCredential.user;
           updateProfile(user, {
             displayName: name.current.value,
-            photoURL: "https://avatars.githubusercontent.com/u/90089033?v=4",
+            photoURL: USER_DP,
           })
             .then(() => {
               // using auth.currentUser instead of user because photoURL and displayName of user
@@ -70,7 +69,7 @@ export default function LoginForm() {
                   photoURL: photoURL,
                 })
               );
-              navigate("/browse");
+
               setIsLoading(false);
             })
             .catch((error) => {
@@ -104,8 +103,7 @@ export default function LoginForm() {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-          console.log(user);
-          navigate("/browse");
+
           setIsLoading(false);
         })
         .catch((error) => {
