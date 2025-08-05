@@ -1,4 +1,4 @@
-import { BACKGROUND_IMAGE } from "../../utils/constants";
+import { BACKGROUND_IMAGE } from "./../utils/constants";
 import Header from "./Header";
 import LoginForm from "./LoginForm";
 

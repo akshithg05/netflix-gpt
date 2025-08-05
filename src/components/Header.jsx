@@ -1,10 +1,10 @@
-import { auth } from "../../utils/firebase";
+import { auth } from "../utils/firebase";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { addUser, removeUser } from "../../store/userSlice";
-import { NETFLIX_LOGO, USER_DP } from "../../utils/constants";
+import { addUser, removeUser } from "../store/userSlice";
+import { NETFLIX_LOGO, USER_DP } from "../utils/constants";
 
 export default function Header() {
   const navigate = useNavigate();

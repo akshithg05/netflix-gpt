@@ -1,14 +1,14 @@
 import { useState, useRef } from "react";
-import { validateEmailAndPassword, validateName } from "../../utils/validate";
+import { validateEmailAndPassword, validateName } from "./../utils/validate";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   updateProfile,
 } from "firebase/auth";
-import { auth } from "../../utils/firebase";
+import { auth } from "./../utils/firebase";
 import { useDispatch } from "react-redux";
-import { addUser } from "../../store/userSlice";
-import { USER_DP } from "../../utils/constants";
+import { addUser } from "./../store/userSlice";
+import { USER_DP } from "./../utils/constants";
 
 export default function LoginForm() {
   const dispatch = useDispatch();

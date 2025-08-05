@@ -19,6 +19,8 @@
 17. Bug fix - if user is not logged in redirect to login page and vice versa for browse page
 18. Unsubscribed to the onAuthStateChanged callback.
 19. Add constants file.
+20. Register to TMDB and create an app and get access token
+21. Get data from TMDB API and check for it.
 
 # Features -
 
