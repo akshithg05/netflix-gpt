@@ -14,3 +14,7 @@ export const API_OPTIONS = {
     Authorization: "Bearer" + " " + import.meta.env.VITE_TMDB_ACCESS_TOKEN,
   },
 };
+
+export const getMovieTrailerUrl = (movieId) =>
+  `https://api.themoviedb.org/3/movie/${movieId}/videos?language=en-US`;
+

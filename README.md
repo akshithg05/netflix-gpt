@@ -21,6 +21,12 @@
 19. Add constants file.
 20. Register to TMDB and create an app and get access token
 21. Get data from TMDB API and check for it.
+22. Created custom hooks for fetching now playing movies from tmdb
+23. Create custom hook for the top now playing movie to display as trailer.
+24. Update store with movies data and trailer movie data.
+25. Planning for main and secondary container
+26. Embedded the youtube video and make it autoplay and mute
+27. Tailwind css for main page video background.
 
 # Features -
 

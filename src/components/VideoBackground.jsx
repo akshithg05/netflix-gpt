@@ -1,0 +1,18 @@
+import useMovieTrailer from "../hooks/useMovieTrailer";
+
+export default function VideoBackground({ movieId }) {
+  // fetch movie trailer or background video using movieId'
+  const trailerVideo = useMovieTrailer(movieId);
+
+  return (
+    <div className="w-screen">
+      <iframe
+        className="w-screen aspect-video"
+        src={`https://www.youtube.com/embed/${trailerVideo?.key}?autoplay=1&mute=1`}
+        title="YouTube video player"
+        allow="autoplay; encrypted-media"
+        referrerPolicy="strict-origin-when-cross-origin"
+      ></iframe>
+    </div>
+  );
+}

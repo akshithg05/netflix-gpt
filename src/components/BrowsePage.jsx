@@ -1,22 +1,17 @@
 import useNowPlayingMovies from "../hooks/useNowPlayingMovies";
 import Header from "./Header";
+import MainContainer from "./MainContainer";
+import SecondaryContainer from "./SecondaryContainer";
 
 export default function BrowsePage() {
   const nowPlayingMovies = useNowPlayingMovies();
 
-  console.log(nowPlayingMovies);
-
   return (
     <div>
       <Header />
-      {/*
-      - MovieContainer
-        - VideoBackground
-        - VideoTitle
-      - SecondaryContainer
-        - Movielist * n
-          - MovieCard * n
-       */}
+
+      <MainContainer nowPlayingMovies={nowPlayingMovies} />
+      <SecondaryContainer />
     </div>
   );
 }

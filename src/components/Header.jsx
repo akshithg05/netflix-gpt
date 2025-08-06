@@ -1,12 +1,13 @@
 import { auth } from "../utils/firebase";
 import { onAuthStateChanged, signOut } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
+import { use, useEffect } from "react";
 import { addUser, removeUser } from "../store/userSlice";
 import { NETFLIX_LOGO, USER_DP } from "../utils/constants";
 
 export default function Header() {
+  const location = useLocation();
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user);
@@ -45,8 +46,11 @@ export default function Header() {
     // unsubscribe when component unmounts
     return () => unsubscribe();
   }, []);
+
   return (
-    <div className="w-screen px-8 absolute bg-gradient-to-b from-black z-10 justify-between flex">
+    <div
+      className={`w-screen px-8 absolute bg-gradient-to-b from-black z-10 justify-between flex`}
+    >
       <img className="w-50" src={NETFLIX_LOGO} alt="netflix-logo" />
       {user && (
         <div className="flex">
