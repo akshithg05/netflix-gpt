@@ -2,7 +2,7 @@ import VideoBackground from "./VideoBackground";
 import VideoTitle from "./VideoTitle";
 
 export default function MainContainer({ nowPlayingMovies }) {
-  const mainMovie = nowPlayingMovies?.results?.[0];
+  const mainMovie = nowPlayingMovies?.[0] || {};
 
   const { original_title, overview, backdrop_path, id } = mainMovie || {};
   return (

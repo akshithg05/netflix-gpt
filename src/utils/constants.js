@@ -18,3 +18,5 @@ export const API_OPTIONS = {
 export const getMovieTrailerUrl = (movieId) =>
   `https://api.themoviedb.org/3/movie/${movieId}/videos?language=en-US`;
 
+export const getTMDBImageUrl = (img) =>
+  `https://image.tmdb.org/t/p/w500/${img}`;

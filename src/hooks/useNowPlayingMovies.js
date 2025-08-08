@@ -11,7 +11,7 @@ export default function useNowPlayingMovies() {
     try {
       const res = await fetch(NOW_PLAYING_MOVIES_URL, API_OPTIONS);
       const data = await res.json();
-      dispatch(addNowPlayingMovies(data));
+      dispatch(addNowPlayingMovies(data?.results));
     } catch (err) {}
   }
 

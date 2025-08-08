@@ -10,7 +10,7 @@ export default function VideoBackground({ movieId }) {
         className="w-screen aspect-video"
         src={`https://www.youtube.com/embed/${trailerVideo?.key}?autoplay=1&mute=1`}
         title="YouTube video player"
-        allow="autoplay; encrypted-media"
+        allow="autoplay"
         referrerPolicy="strict-origin-when-cross-origin"
       ></iframe>
     </div>
