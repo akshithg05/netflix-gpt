@@ -27,6 +27,10 @@
 25. Planning for main and secondary container
 26. Embedded the youtube video and make it autoplay and mute
 27. Tailwind css for main page video background.
+28. Build Movie List
+29. Build Movie Card
+30. Made browse page better with tailwind css
+31. Add image from TMDB website
 
 # Features -
 
