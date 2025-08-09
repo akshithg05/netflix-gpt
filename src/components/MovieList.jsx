@@ -1,7 +1,6 @@
 import MovieCard from "./MovieCard";
 
 export default function MovieList({ title, movies }) {
-  console.log(movies);
   return (
     <div className="px-6">
       <h2 className="text-3xl py-4">{title}</h2>

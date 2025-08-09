@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 function App() {
   return (
     <Provider store={appStore}>
-      <div className="min-h-screen bg-black text-white">
+      <div className=" text-white">
         <Body />
       </div>
     </Provider>

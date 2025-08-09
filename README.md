@@ -31,6 +31,12 @@
 29. Build Movie Card
 30. Made browse page better with tailwind css
 31. Add image from TMDB website
+32. Build GPT Search component
+
+# Todo -
+
+1. Add jest unit test cases
+2. Add error element
 
 # Features -
 

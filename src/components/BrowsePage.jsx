@@ -7,10 +7,13 @@ import useHorrorMovies from "../hooks/useHorrorMovies";
 import Header from "./Header";
 import MainContainer from "./MainContainer";
 import SecondaryContainer from "./SecondaryContainer";
+import GptSearch from "./GptSearch";
+import { useSelector } from "react-redux";
 
 export default function BrowsePage() {
   // Setting all our movies to the store
   const nowPlayingMovies = useNowPlayingMovies();
+  const showGptSearch = useSelector((state) => state.gpt.showGptSearch);
   usePopularMovies();
   useTopRatedMovies();
   useUpComingMovies();
@@ -20,9 +23,14 @@ export default function BrowsePage() {
   return (
     <div>
       <Header />
-
-      <MainContainer nowPlayingMovies={nowPlayingMovies} />
-      <SecondaryContainer />
+      {showGptSearch ? (
+        <GptSearch />
+      ) : (
+        <>
+          <MainContainer nowPlayingMovies={nowPlayingMovies} />
+          <SecondaryContainer />
+        </>
+      )}
     </div>
   );
 }

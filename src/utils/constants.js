@@ -20,3 +20,10 @@ export const getMovieTrailerUrl = (movieId) =>
 
 export const getTMDBImageUrl = (img) =>
   `https://image.tmdb.org/t/p/w500/${img}`;
+
+export const SUPPORTED_LANGUAGES = {
+  en: "English",
+  kn: "ಕನ್ನಡ",
+  hi: "हिन्दी",
+  es: "Español",
+};
