@@ -13,6 +13,7 @@ export default function Header() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user);
+  const showGptSearch = useSelector((state) => state.gpt.showGptSearch);
   const currentLanguage = useSelector(
     (state) => state.language.currentLanguage
   );
@@ -84,7 +85,9 @@ export default function Header() {
               className="m-4 py-2 px-5 rounded-sm h-10 bg-purple-800 cursor-pointer font-bold"
               onClick={handleGptButtonClick}
             >
-              {lang[currentLanguage].gpt_search_button_txt}
+              {!showGptSearch
+                ? lang[currentLanguage].gpt_search_button_txt
+                : lang[currentLanguage].homepage}
             </button>
 
             <button

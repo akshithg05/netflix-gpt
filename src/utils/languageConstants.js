@@ -31,6 +31,7 @@ const lang = {
     upcoming: "Upcoming",
     horror: "Horror",
     action: "Action",
+    homepage: "Homepage",
   },
   es: {
     search: "Buscar",
@@ -65,6 +66,7 @@ const lang = {
     upcoming: "Próximamente",
     horror: "Terror",
     action: "Acción",
+    homepage: "Página de inicio",
   },
   hi: {
     search: "खोजें",
@@ -98,6 +100,7 @@ const lang = {
     upcoming: "आगामी",
     horror: "हॉरर",
     action: "एक्शन",
+    homepage: "होमपेज",
   },
   kn: {
     search: "ಹುಡುಕಿ",
@@ -131,6 +134,42 @@ const lang = {
     upcoming: "ಬರುವ",
     horror: "ಹಾರರ್",
     action: "ಆಕ್ಷನ್",
+    homepage: "ಹೋಮ್‌ಪೇಜ್",
+  },
+  tn: {
+    search: "தேடல்",
+    gpt_search_placeholder: "இன்று நீங்கள் என்ன பார்க்க விரும்புகிறீர்கள்?",
+    gpt_search_button_txt: "ஜிபிடி தேடல்",
+    sign_out_button_txt: "வெளியேறு",
+    name_cannot_be_empty: "பெயர் காலியாக இருக்க முடியாது",
+    user_already_exists:
+      "பயனர் ஏற்கனவே உள்ளது. உள்நுழைய முயற்சிக்கவும் அல்லது பதிவு செய்ய வேறு மின்னஞ்சலைப் பயன்படுத்தவும்.",
+    unknown_error:
+      "அறியப்படாத பிழை ஏற்பட்டது. தயவுசெய்து பிறகு மீண்டும் முயற்சிக்கவும்",
+    incorrect_username_password: "தவறான பயனர் பெயர்/ கடவுச்சொல்.",
+    sign_up: "பதிவு செய்யவும்",
+    sign_in: "உள்நுழையவும்",
+    signing_in: "உள்நுழைகிறது...",
+    signing_up: "பதிவு செய்கிறது...",
+    full_name: "முழு பெயர்",
+    email: "மின்னஞ்சல்",
+    password: "கடவுச்சொல்",
+    new_to_netflix: "நெட்ஃபிளிக்ஸில் புதியவரா?",
+    sign_up_now: "இப்போது பதிவு செய்யவும்!",
+    sign_in_now: "இப்போது உள்நுழைக!",
+    already_registered: "முன்னதாக பதிவு செய்துள்ளீர்களா?",
+    invalid_email: "தவறான மின்னஞ்சல். சரியான மின்னஞ்சலை உள்ளிடவும்",
+    invalid_password:
+      "தவறான கடவுச்சொல். கடவுச்சொல் குறைந்தது 8 எழுத்துகள் நீளமாக இருக்க வேண்டும் மற்றும் பெரிய எழுத்து, சிறிய எழுத்து மற்றும் ஒரு சிறப்பு எழுத்தை உள்ளடக்க வேண்டும்.",
+    play: "பிளே",
+    more_info: "மேலும் தகவல்",
+    now_playing: "இப்போது ஒளிபரப்பில் உள்ளது",
+    top_rated: "சிறந்த மதிப்பீடு",
+    popular: "பிரபலமானது",
+    upcoming: "வந்துவருகிறது",
+    horror: "ஹாரர்",
+    action: "செயல்",
+    homepage: "முகப்பு பக்கம்",
   },
 };
 

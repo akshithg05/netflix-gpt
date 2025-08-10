@@ -26,6 +26,7 @@ export const SUPPORTED_LANGUAGES = {
   kn: "ಕನ್ನಡ",
   hi: "हिन्दी",
   es: "Español",
+  tn: "தமிழ்",
 };
 
 export const FIREBASE_AUTH_ERROR_CODES = {

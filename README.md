@@ -32,6 +32,10 @@
 30. Made browse page better with tailwind css
 31. Add image from TMDB website
 32. Build GPT Search component
+33. GPT search page
+34. GPT search bar
+35. Add multi-language support (English, spanish, Hindi, Kannada)
+36. Integrate GPT APIs
 
 # Todo -
 
