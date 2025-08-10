@@ -27,3 +27,8 @@ export const SUPPORTED_LANGUAGES = {
   hi: "हिन्दी",
   es: "Español",
 };
+
+export const FIREBASE_AUTH_ERROR_CODES = {
+  EMAIL_ALREADY_IN_USE: "auth/email-already-in-use",
+  INVALID_CREDENTIAL: "auth/invalid-credential",
+};

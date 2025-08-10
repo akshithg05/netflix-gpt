@@ -11,8 +11,9 @@
 // [^\s@]+ → domain name (no spaces or @)
 // \. → dot before the domain extension
 // [^\s@]+$ → top-level domain (e.g., .com, .org)
+import lang from "./languageConstants";
 
-export function validateEmailAndPassword(email, password) {
+export function validateEmailAndPassword(email, password, currentLanguage) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
   const isEmailValid = emailRegex.test(email);
@@ -20,11 +21,10 @@ export function validateEmailAndPassword(email, password) {
   const validation = { email: null, password: null };
 
   if (!isEmailValid) {
-    validation.email = "Invalid email. Enter valid email";
+    validation.email = lang[currentLanguage].invalid_email;
   }
   if (!isPasswordValid) {
-    validation.password =
-      "Invalid password. Password must be at least 8 characters long and include uppercase, lowercase, and a special character.";
+    validation.password = lang[currentLanguage].invalid_password;
   }
 
   return validation;
