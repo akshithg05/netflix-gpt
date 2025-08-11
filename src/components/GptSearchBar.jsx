@@ -54,7 +54,7 @@ export default function GptSearchBar({ isLoading, setIsLoading }) {
   return (
     <div className="pt-[10%] flex justify-center">
       <form
-        className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-12 bg-black p-4 rounded-xl gap-2"
+        className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-12 bg-black p-4 rounded-t-lg gap-2"
         onSubmit={(e) => e.preventDefault()}
       >
         <input

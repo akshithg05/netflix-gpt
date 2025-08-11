@@ -16,7 +16,9 @@ export default function GptSearch() {
           <p>Searching for movies...</p>
         </div>
       ) : (
-        <GptSearchMovieSuggestions />
+        <div className="w-full max-w-4xl  md:grid-cols-12 bg-black p-4  mx-auto text-center rounded-b-lg">
+          <GptSearchMovieSuggestions />
+        </div>
       )}
     </div>
   );
