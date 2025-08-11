@@ -27,7 +27,7 @@ export default function SecondaryContainer() {
           movies={movies?.upComingMovies}
         />
         <MovieList
-          title={lang[currentLanguage].upcoming}
+          title={lang[currentLanguage].horror}
           movies={movies?.horrorMovies}
         />
         <MovieList

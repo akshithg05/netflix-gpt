@@ -1,4 +1,4 @@
-import { getTMDBImageUrl } from "../utils/constants";
+import { getTMDBImageUrl } from "../utils/api";
 
 export default function MovieCard({ posterPath }) {
   return (

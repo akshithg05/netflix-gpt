@@ -15,12 +15,6 @@ export const API_OPTIONS = {
   },
 };
 
-export const getMovieTrailerUrl = (movieId) =>
-  `https://api.themoviedb.org/3/movie/${movieId}/videos?language=en-US`;
-
-export const getTMDBImageUrl = (img) =>
-  `https://image.tmdb.org/t/p/w500/${img}`;
-
 export const SUPPORTED_LANGUAGES = {
   en: "English",
   kn: "ಕನ್ನಡ",
@@ -33,3 +27,6 @@ export const FIREBASE_AUTH_ERROR_CODES = {
   EMAIL_ALREADY_IN_USE: "auth/email-already-in-use",
   INVALID_CREDENTIAL: "auth/invalid-credential",
 };
+
+export const GPT_INSTRUCTIONS =
+  "You are a movie recommendation system and suggest some movies based on the user's input: Do not give any other results or deviate form the topic. Just give the 5 movie names, comma seperated and nothing else, Example result: Don, F1, The Batman, The Dark Knight, Interstellar, Inception, Joker, Avengers: Endgame, Avengers: Infinity War, Thor: Ragnarok. You can also accept inputs in Kannada(kn), Tamil(tn) and Hindi(hi), but let the generated results be in English(en). If there are any offensive words or anything against the community guidelines, do not return those results. return a fixed statement like - No results found, if there are no results. Do not return any other text or information. Just return the movie names in a comma seperated format. If the input is empty, return a fixed statement like - No input provided, please provide some input to search for movies.";

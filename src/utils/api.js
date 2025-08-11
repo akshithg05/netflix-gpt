@@ -15,3 +15,12 @@ export const ACTION_MOVIES_URL =
 
 export const HORROR_MOVIES_URL =
   "https://api.themoviedb.org/3/discover/movie?with_genres=27&language=en-US&sort_by=popularity.desc&page=1";
+
+export const getMovieTrailerUrl = (movieId) =>
+  `https://api.themoviedb.org/3/movie/${movieId}/videos?language=en-US`;
+
+export const getTMDBImageUrl = (img) =>
+  `https://image.tmdb.org/t/p/w500/${img}`;
+
+export const searchMovieTMDBUrl = (movieName) =>
+  `https://api.themoviedb.org/3/search/movie?query=${movieName}&include_adult=false&language=en-US&page=1`;

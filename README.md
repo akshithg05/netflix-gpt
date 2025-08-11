@@ -34,13 +34,22 @@
 32. Build GPT Search component
 33. GPT search page
 34. GPT search bar
-35. Add multi-language support (English, spanish, Hindi, Kannada)
+35. Add multi-language support (English, spanish, Hindi, Kannada, Tamil)
 36. Integrate GPT APIs
+37. include openAI gpt 4o model to search for movie based on the user input
+38. AI model is configured to return the top 5 movies based on user input
+39. Returned movies are queried using tmdb search API.
+40. tmdb results and gpt search results are added to Redux store for further use.
+41. Adding Guardrails to remove offensive comments.
+42. Standardizing errors
 
 # Todo -
 
 1. Add jest unit test cases
-2. Add error element
+2. Add error element and errorRoute
+3. Make suggested movie card on the UI
+4. handle edge cases
+5. Make netflix GPT logo
 
 # Features -
 
