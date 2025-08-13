@@ -1,74 +1,139 @@
-# Netflix GPT
+# 🎬 NetflixGPT
 
-1. Created vite app - npm create vite@latest netflix-gpt
-2. Installed and configured tailwind css.
-3. Header
-4. Routing App
-5. Login form / Sign Up form
-6. Form Validation
-7. useRef hook
-8. Firebase setup
-9. Firebase deployment to production
-10. Create sign up user in firebase
-11. Implement sign in user API
-12. Created redux store with userSlice
-13. Implemented Sign out
-14. UpdateProfile API call
-15. Fetch movies from TMDB.
-16. Update display name.
-17. Bug fix - if user is not logged in redirect to login page and vice versa for browse page
-18. Unsubscribed to the onAuthStateChanged callback.
-19. Add constants file.
-20. Register to TMDB and create an app and get access token
-21. Get data from TMDB API and check for it.
-22. Created custom hooks for fetching now playing movies from tmdb
-23. Create custom hook for the top now playing movie to display as trailer.
-24. Update store with movies data and trailer movie data.
-25. Planning for main and secondary container
-26. Embedded the youtube video and make it autoplay and mute
-27. Tailwind css for main page video background.
-28. Build Movie List
-29. Build Movie Card
-30. Made browse page better with tailwind css
-31. Add image from TMDB website
-32. Build GPT Search component
-33. GPT search page
-34. GPT search bar
-35. Add multi-language support (English, spanish, Hindi, Kannada, Tamil)
-36. Integrate GPT APIs
-37. include openAI gpt 4o model to search for movie based on the user input
-38. AI model is configured to return the top 5 movies based on user input
-39. Returned movies are queried using tmdb search API.
-40. tmdb results and gpt search results are added to Redux store for further use.
-41. Adding Guardrails to remove offensive comments.
-42. Standardizing errors
-43. Adding clear button for movie search
-44. Responsive sizing
-45. prompt optmization
-46. Added feature to display movie trailer on click of the movie after suggestion.
-47. Added Error route and error element
-48. Added error edge cases
-49. Make netflix GPT logo and add.
-50. Added memoization to cache the api calls and use it from store rather than making call everytime
+NetflixGPT is a personal project that blends the sleek UI of Netflix with the intelligence of OpenAI’s GPT-4o model.  
+It allows users to explore trending movies, watch trailers, and even get AI-powered recommendations based on natural language prompts — all in a responsive, modern web application.
 
-# Todo -
+---
 
-1. Add jest unit test cases
+## 🚀 Features
 
-# Features -
+### 🔑 Authentication & User Management
 
-    1. Browse page- (After authentication)
-        - Header
-        - Main Movie
-            - Trailer in BG
-            - Title and Description
-            - Movie Suggestions
-                -MoviesList*N
+- **Sign Up / Login / Logout** using Firebase Authentication.
+- **Form validation** with instant feedback.
+- **Profile updates** including display name.
+- **Auth guard** to protect routes (redirects to login if unauthenticated).
+- Unsubscribe from `onAuthStateChanged` listener to avoid memory leaks.
 
-    2. Login/Signup page - (if user not auth)
-        - Dign in/ sign up form
-        - redirect to browse page
+### 🎥 Movie Browsing
 
-    3. Netflix GPT
-        - Search Bar
-        - Movie Suggestions
+- Fetch **Now Playing**, **Top Movies**, and more using **TMDB API**.
+- **Main hero section** with autoplaying & muted background trailers.
+- **Movie list & card** components with responsive Tailwind CSS styling.
+- On-click **movie trailer pop-up**.
+- Cached API responses using **Redux memoization** for better performance.
+
+### 🤖 AI-Powered Movie Search
+
+- GPT-4o integration for **natural language movie search**.
+- AI returns top 5 movie suggestions based on user input.
+- Results fetched via **TMDB Search API** and displayed with movie details.
+- **Multi-language support**: English, Spanish, Hindi, Kannada, Tamil.
+- Offensive comment filtering with **guardrails**.
+- Search **clear button** and prompt optimization for better AI results.
+
+### 🛠 Technical Improvements
+
+- **Redux store** with `userSlice` and movie state management.
+- **Custom hooks** for data fetching from TMDB.
+- **Error handling** with custom error routes and edge case coverage.
+- **Responsive design** for mobile, tablet, and desktop.
+- **Memoization** to reduce redundant API calls.
+- **Unit testing** with Jest.
+
+---
+
+## 🏗 Tech Stack
+
+- **Frontend:** React (Vite), Tailwind CSS
+- **State Management:** Redux Toolkit
+- **Authentication & Hosting:** Firebase
+- **API Integration:** TMDB API, OpenAI GPT-4o
+- **Testing:** Jest
+- **Deployment:** Firebase Hosting
+
+---
+
+## 📦 Installation & Setup
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/netflix-gpt.git
+   cd netflix-gpt
+   ```
+
+# 🎬 NetflixGPT
+
+NetflixGPT is a personal project that blends the sleek UI of Netflix with the intelligence of OpenAI’s GPT-4o model.  
+It allows users to explore trending movies, watch trailers, and even get AI-powered recommendations based on natural language prompts — all in a responsive, modern web application.
+
+---
+
+## 🚀 Features
+
+### 🔑 Authentication & User Management
+
+- **Sign Up / Login / Logout** using Firebase Authentication.
+- **Form validation** with instant feedback.
+- **Profile updates** including display name.
+- **Auth guard** to protect routes (redirects to login if unauthenticated).
+- Unsubscribe from `onAuthStateChanged` listener to avoid memory leaks.
+
+### 🎥 Movie Browsing
+
+- Fetch **Now Playing**, **Top Movies**, and more using **TMDB API**.
+- **Main hero section** with autoplaying & muted background trailers.
+- **Movie list & card** components with responsive Tailwind CSS styling.
+- On-click **movie trailer pop-up**.
+- Cached API responses using **Redux memoization** for better performance.
+
+### 🤖 AI-Powered Movie Search
+
+- GPT-4o integration for **natural language movie search**.
+- AI returns top 5 movie suggestions based on user input.
+- Results fetched via **TMDB Search API** and displayed with movie details.
+- **Multi-language support**: English, Spanish, Hindi, Kannada, Tamil.
+- Offensive comment filtering with **guardrails**.
+- Search **clear button** and prompt optimization for better AI results.
+
+### 🛠 Technical Improvements
+
+- **Redux store** with `userSlice` and movie state management.
+- **Custom hooks** for data fetching from TMDB.
+- **Error handling** with custom error routes and edge case coverage.
+- **Responsive design** for mobile, tablet, and desktop.
+- **Memoization** to reduce redundant API calls.
+- **Unit testing** with Jest.
+
+---
+
+## 🏗 Tech Stack
+
+- **Frontend:** React (Vite), Tailwind CSS
+- **State Management:** Redux Toolkit
+- **Authentication & Hosting:** Firebase
+- **API Integration:** TMDB API, OpenAI GPT-4o
+- **Testing:** Jest
+- **Deployment:** Firebase Hosting
+
+---
+
+# Clone the repository
+git clone https://github.com/yourusername/netflix-gpt.git
+cd netflix-gpt
+
+# Install dependencies
+npm install
+
+# Create .env file with your keys
+cat <<EOF > .env
+VITE_FIREBASE_API_KEY=your_firebase_api_key
+VITE_TMDB_ACCESS_TOKEN=your_tmdb_token
+VITE_OPENAI_API_KEY=your_openai_api_key
+EOF
+
+# Run locally
+npm run dev
+
+# Build for production
+npm run build
