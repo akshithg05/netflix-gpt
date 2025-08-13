@@ -22,7 +22,7 @@ export default function useMovieTrailer(movieId) {
 
   useEffect(() => {
     if (movieId) {
-      getMovieTrailer(movieId);
+      !trailerVideo && getMovieTrailer(movieId);
     }
   }, [movieId]);
 

@@ -16,7 +16,7 @@ export default function useTopRatedMovies() {
   }
 
   useEffect(() => {
-    getNowPlayingMovies();
+    !movies && getNowPlayingMovies();
   }, []);
 
   return movies;

@@ -16,7 +16,7 @@ export default function useNowPlayingMovies() {
   }
 
   useEffect(() => {
-    getNowPlayingMovies();
+    !movies && getNowPlayingMovies();
   }, []);
 
   return movies;

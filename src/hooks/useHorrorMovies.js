@@ -16,7 +16,7 @@ export default function useHorrorMovies() {
   }
 
   useEffect(() => {
-    getNowPlayingMovies();
+    !movies && getNowPlayingMovies();
   }, []);
 
   return movies;

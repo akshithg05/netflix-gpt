@@ -49,6 +49,7 @@
 47. Added Error route and error element
 48. Added error edge cases
 49. Make netflix GPT logo and add.
+50. Added memoization to cache the api calls and use it from store rather than making call everytime
 
 # Todo -
 

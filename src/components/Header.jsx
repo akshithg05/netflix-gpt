@@ -67,7 +67,7 @@ export default function Header() {
 
   return (
     <div className="w-screen px-4 sm:px-8 py-2 fixed top-0 left-0 bg-gradient-to-b from-black z-50 flex flex-wrap md:flex-nowrap justify-between items-center">
-      <img className="w-24 sm:w-32" src={NETFLIX_GPT_LOGO} alt="netflix-logo" />
+      <img className="w-30 sm:w-32" src={NETFLIX_GPT_LOGO} alt="netflix-logo" />
 
       <div className="flex flex-wrap md:flex-nowrap items-center gap-3">
         <select
