@@ -34,6 +34,8 @@ const lang = {
     homepage: "Homepage",
     searching: "Searching for movies...",
     clear: "Clear",
+    loading: "Loading...",
+    no_trailer_message: "Sorry, No trailer available for this movie",
   },
   es: {
     search: "Buscar",
@@ -71,6 +73,9 @@ const lang = {
     homepage: "Página de inicio",
     searching: "Buscando películas...",
     clear: "claro",
+    loading: "Cargando...",
+    no_trailer_message:
+      "Lo siento, no hay tráiler disponible para esta película",
   },
   hi: {
     search: "खोजें",
@@ -107,6 +112,8 @@ const lang = {
     homepage: "होमपेज",
     searching: "फिल्में खोजी जा रही हैं...",
     clear: "साफ करें",
+    loading: "लोड हो रहा है...",
+    no_trailer_message: "क्षमा करें, इस फिल्म का ट्रेलर उपलब्ध नहीं है",
   },
   kn: {
     search: "ಹುಡುಕಿ",
@@ -143,6 +150,8 @@ const lang = {
     homepage: "ಹೋಮ್‌ಪೇಜ್",
     searching: "ಚಿತ್ರಗಳನ್ನು ಹುಡುಕಲಾಗುತ್ತಿದೆ...",
     clear: "ನಿಚ್ಚಳ",
+    loading: "ಲೋಡಿಂಗ್...",
+    no_trailer_message: "ಕ್ಷಮಿಸಿ, ಈ ಚಿತ್ರದ ಟ್ರೈಲರ್ ಲಭ್ಯವಿಲ್ಲ",
   },
   tn: {
     search: "தேடல்",
@@ -180,6 +189,8 @@ const lang = {
     homepage: "முகப்பு பக்கம்",
     searching: "சினிமாக்களை தேடுகிறது...",
     clear: "சுத்தமான",
+    loading: "ஏற்றுகிறது...",
+    no_trailer_message: "மன்னிக்கவும், இந்த திரைப்படத்திற்கான டிரெய்லர் இல்லை",
   },
 };
 

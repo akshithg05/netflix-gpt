@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { API_OPTIONS } from "../utils/constants";
+import { API_OPTIONS, TRAILER } from "../utils/constants";
 import { getMovieTrailerUrl } from "../utils/api";
 import { useDispatch, useSelector } from "react-redux";
 import { addTrailerVideo } from "../store/movieSlice";
@@ -12,9 +12,7 @@ export default function useMovieTrailer(movieId) {
     const url = getMovieTrailerUrl(movieId);
     const res = await fetch(url, API_OPTIONS);
     const data = await res.json();
-    const movieTrailer = data?.results?.find(
-      (video) => video.type === "Trailer"
-    );
+    const movieTrailer = data?.results?.find((video) => video.type === TRAILER);
     if (!movieTrailer) {
       dispatch(addTrailerVideo(data?.results?.[0]));
     }

@@ -42,14 +42,15 @@
 40. tmdb results and gpt search results are added to Redux store for further use.
 41. Adding Guardrails to remove offensive comments.
 42. Standardizing errors
+43. Adding clear button for movie search
 
 # Todo -
 
 1. Add jest unit test cases
 2. Add error element and errorRoute
-3. Make suggested movie card on the UI
-4. handle edge cases
-5. Make netflix GPT logo
+3. handle edge cases
+4. Make netflix GPT logo
+5. Movie card pop up and play trailer when card is clicked as a modal (feature)
 
 # Features -
 

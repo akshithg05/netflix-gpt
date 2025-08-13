@@ -44,10 +44,22 @@ export default function GptSearchBar({ setIsLoading, setClear }) {
         ?.split(",")
         .map((movie) => movie.trim());
 
-      let promiseArray = gptMovies.map((movie) => searchMovieTMDB(movie)); // returns an array of promises
-      let tmdbResults = await Promise.all(promiseArray); // gives array for resolved promises
-      tmdbResults = tmdbResults.flat(); // flatten the array to get all results in one array
-      tmdbResults = tmdbResults.filter((movie) => movie?.title);
+      let promiseArray = gptMovies.map((movie) => searchMovieTMDB(movie));
+      let tmdbResults = await Promise.all(promiseArray);
+
+      let interleaved = [];
+      let maxLen = Math.max(...tmdbResults.map((arr) => arr.length));
+
+      for (let i = 0; i < maxLen; i++) {
+        for (let arr of tmdbResults) {
+          if (arr[i]) {
+            interleaved.push(arr[i]);
+          }
+        }
+      }
+
+      tmdbResults = interleaved.filter((movie) => movie?.title);
+
       dispatch(
         addSearchedMovies({ tmdbResults: tmdbResults, gptMovies: gptMovies })
       );
