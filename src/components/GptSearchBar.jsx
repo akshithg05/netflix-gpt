@@ -6,7 +6,7 @@ import { API_OPTIONS, GPT_INSTRUCTIONS } from "../utils/constants";
 import { searchMovieTMDBUrl } from "../utils/api";
 import { addSearchedMovies } from "../store/gptSlice";
 
-export default function GptSearchBar({ isLoading, setIsLoading }) {
+export default function GptSearchBar({ setIsLoading, setClear }) {
   const dispatch = useDispatch();
   const searchTerm = useRef(null);
   const language = useSelector((state) => state.language.currentLanguage);
@@ -18,9 +18,16 @@ export default function GptSearchBar({ isLoading, setIsLoading }) {
     return data.results;
   }
 
+  function handleClearClick() {
+    setClear(true);
+    searchTerm.current.value = "";
+    dispatch(addSearchedMovies({ tmdbResults: [], gptMovies: [] }));
+  }
+
   async function handleGptSearchClick() {
     try {
       setIsLoading(true);
+      setClear(false);
       const gptQuery = GPT_INSTRUCTIONS;
 
       const response = await opeanai.responses.create({
@@ -59,16 +66,23 @@ export default function GptSearchBar({ isLoading, setIsLoading }) {
       >
         <input
           ref={searchTerm}
-          className="py-2 px-3 border rounded-sm w-full col-span-1 md:col-span-9"
+          className="py-2 px-3 border rounded-sm w-full col-span-1 md:col-span-8"
           type="text"
           placeholder={lang[language].gpt_search_placeholder}
         />
         <button
-          className="py-2 px-4 rounded-sm bg-red-700 font-bold text-white w-full md:w-auto col-span-1 md:col-span-3"
+          className="py-2 px-4 rounded-sm bg-red-700 font-bold text-white w-full md:w-auto col-span-1 md:col-span-3 hover:bg-red-800 cursor-pointer"
           type="submit"
           onClick={handleGptSearchClick}
         >
           {lang[language].search}
+        </button>
+        <button
+          className="py-2 px-2 rounded-sm bg-red-900 font-bold text-white w-full md:w-auto col-span-1 md:col-span-1 hover:bg-red-800 cursor-pointer whitespace-normal break-words"
+          type="submit"
+          onClick={handleClearClick}
+        >
+          {lang[language].clear}
         </button>
       </form>
     </div>

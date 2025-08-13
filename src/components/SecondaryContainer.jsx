@@ -7,9 +7,16 @@ export default function SecondaryContainer() {
   const currentLanguage = useSelector(
     (state) => state.language.currentLanguage
   );
+
   return (
     <div className="bg-black">
-      <div className=" -mt-90  pl-12 relative z-20">
+      <div
+        className="
+    mt-0 sm:-mt-10 md:-mt-20 [@media(min-width:1000px)]:-mt-115
+    px-4 sm:px-8 md:px-12
+    relative z-20
+  "
+      >
         <MovieList
           title={lang[currentLanguage].now_playing}
           movies={movies?.nowPlayingMovies}

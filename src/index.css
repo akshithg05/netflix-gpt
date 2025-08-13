@@ -8,4 +8,12 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+
+  /* Custom multi-line clamp utility */
+  .line-clamp-4 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4; /* change number for more/less lines */
+  }
 }

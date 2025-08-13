@@ -62,15 +62,14 @@ export default function Header() {
   }, []);
 
   return (
-    <div className="w-screen px-8 absolute bg-gradient-to-b from-black z-10 flex justify-between items-center">
-      {/* Left side - Logo */}
-      <img className="w-50" src={NETFLIX_LOGO} alt="netflix-logo" />
+    <div className="w-screen px-4 sm:px-8 py-2 fixed top-0 left-0 bg-gradient-to-b from-black z-50 flex flex-wrap md:flex-nowrap justify-between items-center">
+      <img className="w-24 sm:w-32" src={NETFLIX_LOGO} alt="netflix-logo" />
 
-      <div className="flex items-center">
+      <div className="flex flex-wrap md:flex-nowrap items-center gap-3">
         <select
-          className="m-4 py-2 px-5 h-10 bg-amber-700 cursor-pointer font-bold rounded-sm"
+          className="py-1 px-3 h-9 bg-amber-700 cursor-pointer font-bold rounded-sm text-sm md:text-base"
           onChange={handleLanguageChange}
-          value={currentLanguage} // optional: keeps select in sync
+          value={currentLanguage}
         >
           {Object.entries(SUPPORTED_LANGUAGES).map(([code, label]) => (
             <option key={code} value={code}>
@@ -82,7 +81,7 @@ export default function Header() {
         {user && (
           <>
             <button
-              className="m-4 py-2 px-5 rounded-sm h-10 bg-purple-800 cursor-pointer font-bold"
+              className="py-1 px-3 rounded-sm h-9 bg-purple-800 cursor-pointer font-bold text-sm md:text-base"
               onClick={handleGptButtonClick}
             >
               {!showGptSearch
@@ -91,14 +90,14 @@ export default function Header() {
             </button>
 
             <button
-              className="m-4 py-2 px-4 rounded-sm h-10 bg-red-700 cursor-pointer font-bold"
+              className="py-1 px-3 rounded-sm h-9 bg-red-700 cursor-pointer font-bold text-sm md:text-base"
               onClick={handleSignOut}
             >
               {lang[currentLanguage].sign_out_button_txt}
             </button>
 
             <img
-              className="w-10 h-10 m-4 rounded-sm"
+              className="w-8 h-8 sm:w-10 sm:h-10 rounded-sm"
               alt="user-icon"
               src={user?.photoURL ? user.photoURL : USER_DP}
             />

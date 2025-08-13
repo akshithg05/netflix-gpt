@@ -32,6 +32,8 @@ const lang = {
     horror: "Horror",
     action: "Action",
     homepage: "Homepage",
+    searching: "Searching for movies...",
+    clear: "Clear",
   },
   es: {
     search: "Buscar",
@@ -67,6 +69,8 @@ const lang = {
     horror: "Terror",
     action: "Acción",
     homepage: "Página de inicio",
+    searching: "Buscando películas...",
+    clear: "claro",
   },
   hi: {
     search: "खोजें",
@@ -101,6 +105,8 @@ const lang = {
     horror: "हॉरर",
     action: "एक्शन",
     homepage: "होमपेज",
+    searching: "फिल्में खोजी जा रही हैं...",
+    clear: "साफ करें",
   },
   kn: {
     search: "ಹುಡುಕಿ",
@@ -135,6 +141,8 @@ const lang = {
     horror: "ಹಾರರ್",
     action: "ಆಕ್ಷನ್",
     homepage: "ಹೋಮ್‌ಪೇಜ್",
+    searching: "ಚಿತ್ರಗಳನ್ನು ಹುಡುಕಲಾಗುತ್ತಿದೆ...",
+    clear: "ನಿಚ್ಚಳ",
   },
   tn: {
     search: "தேடல்",
@@ -170,6 +178,8 @@ const lang = {
     horror: "ஹாரர்",
     action: "செயல்",
     homepage: "முகப்பு பக்கம்",
+    searching: "சினிமாக்களை தேடுகிறது...",
+    clear: "சுத்தமான",
   },
 };
 

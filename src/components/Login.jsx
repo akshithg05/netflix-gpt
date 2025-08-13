@@ -7,7 +7,11 @@ export default function Login() {
     <div className="relative h-screen w-screen overflow-hidden overflow-y-auto">
       <Header />
       <div className="absolute">
-        <img src={BACKGROUND_IMAGE} alt="bg-image" className="max-w-none" />
+        <img
+          src={BACKGROUND_IMAGE}
+          alt="bg-image"
+          className="min-w-screen min-h-screen max-w-screen object-cover"
+        />
       </div>
 
       <LoginForm />

@@ -7,7 +7,7 @@ import useHorrorMovies from "../hooks/useHorrorMovies";
 import Header from "./Header";
 import MainContainer from "./MainContainer";
 import SecondaryContainer from "./SecondaryContainer";
-import GptSearch from "./GptSearch";
+import GptSearchPage from "./GptSearchPage";
 import { useSelector } from "react-redux";
 
 export default function BrowsePage() {
@@ -24,7 +24,7 @@ export default function BrowsePage() {
     <div>
       <Header />
       {showGptSearch ? (
-        <GptSearch />
+        <GptSearchPage />
       ) : (
         <>
           <MainContainer nowPlayingMovies={nowPlayingMovies} />

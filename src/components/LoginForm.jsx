@@ -118,9 +118,22 @@ export default function LoginForm() {
   };
 
   return (
-    <div className="w-3/12 absolute pl-8 pr-13 pb-10 pt-7 bg-black/85 rounded-sm my-50 mx-auto left-0 right-0">
-      <h1 className="text-white p-2 text-2xl pb-4 font-bold">
-        {signUp ? lang[currentLanguage].sign_up : lang[currentLanguage].sign_up}
+    <div
+      className="
+  w-11/12 sm:w-8/12 md:w-6/12 lg:w-4/12 xl:w-3/12
+  absolute 
+  px-6 py-8 sm:px-8 sm:py-10
+  bg-black/85 rounded-md 
+  md-20  mt-50 mx-auto left-0 right-0
+"
+    >
+      <h1
+        className="
+    text-white text-xl sm:text-2xl md:text-3xl 
+    font-bold pb-4
+  "
+      >
+        {signUp ? lang[currentLanguage].sign_up : lang[currentLanguage].sign_in}
       </h1>
 
       <form
@@ -130,20 +143,21 @@ export default function LoginForm() {
         }}
       >
         {error && (
-          <div className="bg-[rgb(216,157,49)] mx-2 p-4 w-full rounded-sm font-bold text-black">
+          <div className="bg-yellow-500 mx-2 p-3 sm:p-4 rounded-md font-bold text-black text-sm sm:text-base">
             {errorMessage}
           </div>
         )}
+
         {signUp && (
           <>
             <input
               ref={name}
-              className="mx-2 my-4 p-4 bg-gray-700 text-white rounded-sm w-full"
+              className="mx-2 my-3 sm:my-4 p-3 sm:p-4 bg-gray-700 text-white rounded-md w-full text-sm sm:text-base"
               placeholder={lang[currentLanguage].full_name}
               type="text"
             />
             {!nameValidation && (
-              <p className="mx-2 text-red-600">
+              <p className="mx-2 text-red-500 text-xs sm:text-sm">
                 {lang[currentLanguage].name_cannot_be_empty}
               </p>
             )}
@@ -152,26 +166,30 @@ export default function LoginForm() {
 
         <input
           ref={email}
-          className="mx-2 my-4 p-4 bg-gray-700 text-white rounded-sm w-full"
+          className="mx-2 my-3 sm:my-4 p-3 sm:p-4 bg-gray-700 text-white rounded-md w-full text-sm sm:text-base"
           placeholder={lang[currentLanguage].email}
           type="text"
         />
         {validation.email && (
-          <p className="mx-2 text-red-600">{validation.email}</p>
+          <p className="mx-2 text-red-500 text-xs sm:text-sm">
+            {validation.email}
+          </p>
         )}
 
         <input
           ref={password}
-          className="mx-2 my-4 p-4 bg-gray-700 text-white rounded-sm w-full"
+          className="mx-2 my-3 sm:my-4 p-3 sm:p-4 bg-gray-700 text-white rounded-md w-full text-sm sm:text-base"
           placeholder={lang[currentLanguage].password}
           type="password"
         />
         {validation.password && (
-          <p className="mx-2 text-red-600">{validation.password}</p>
+          <p className="mx-2 text-red-500 text-xs sm:text-sm">
+            {validation.password}
+          </p>
         )}
 
         <button
-          className="mx-2 my-4 p-4 bg-red-700 text-white text-1xl rounded-sm w-full cursor-pointer disabled:bg-red-900 disabled:cursor-not-allowed"
+          className="mx-2 my-4 p-3 sm:p-4 bg-red-700 text-white text-base sm:text-lg rounded-md w-full cursor-pointer disabled:bg-red-900 disabled:cursor-not-allowed"
           type="submit"
           disabled={isLoading}
         >
@@ -186,21 +204,21 @@ export default function LoginForm() {
       </form>
 
       {!signUp ? (
-        <p className="py-4 mx-2 text-white">
+        <p className="py-4 mx-2 text-white text-xs sm:text-sm md:text-base">
           {lang[currentLanguage].new_to_netflix}{" "}
           <button className="cursor-pointer" onClick={() => setSignUp(true)}>
-            <p className="font-bold underline">
+            <span className="font-bold underline">
               {lang[currentLanguage].sign_up_now}
-            </p>
+            </span>
           </button>
         </p>
       ) : (
-        <p className="py-4 mx-2 text-white">
+        <p className="py-4 mx-2 text-white text-xs sm:text-sm md:text-base">
           {lang[currentLanguage].already_registered}{" "}
           <button className="cursor-pointer" onClick={() => setSignUp(false)}>
-            <p className="font-bold underline">
+            <span className="font-bold underline">
               {lang[currentLanguage].sign_in_now}
-            </p>
+            </span>
           </button>
         </p>
       )}
