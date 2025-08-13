@@ -3,7 +3,9 @@
 NetflixGPT is a personal project that blends the sleek UI of Netflix with the intelligence of OpenAI’s GPT-4o model.  
 It allows users to explore trending movies, watch trailers, and even get AI-powered recommendations based on natural language prompts — all in a responsive, modern web application.
 
----
+## 🚀 Live Demo
+
+## Check out the live app here: [NetflixGPT - Browse Page](https://neftlix-gtp.netlify.app/browse)
 
 ## 🚀 Features
 
@@ -119,13 +121,16 @@ It allows users to explore trending movies, watch trailers, and even get AI-powe
 ---
 
 # Clone the repository
+
 git clone https://github.com/yourusername/netflix-gpt.git
 cd netflix-gpt
 
 # Install dependencies
+
 npm install
 
 # Create .env file with your keys
+
 cat <<EOF > .env
 VITE_FIREBASE_API_KEY=your_firebase_api_key
 VITE_TMDB_ACCESS_TOKEN=your_tmdb_token
@@ -133,7 +138,9 @@ VITE_OPENAI_API_KEY=your_openai_api_key
 EOF
 
 # Run locally
+
 npm run dev
 
 # Build for production
+
 npm run build
