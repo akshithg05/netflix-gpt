@@ -1,3 +1,9 @@
+
+// Mock constants to avoid import.meta.env issues
+jest.mock("../../utils/constants", () => ({
+  NO_RESULTS_FOUND: "No results found",
+}));
+
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import { Provider } from "react-redux";
