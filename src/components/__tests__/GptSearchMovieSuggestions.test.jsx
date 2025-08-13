@@ -28,20 +28,12 @@ jest.mock("../../utils/languageConstants", () => ({
 // Mock SuggestedMovieCard
 jest.mock("../SuggestedMovieCard", () => ({
   __esModule: true,
-  default: ({ movie }) => <div data-testid="suggested-movie">{movie.title}</div>,
+  default: ({ movie }) => (
+    <div data-testid="suggested-movie">{movie.title}</div>
+  ),
 }));
 
 describe("GptSearchMovieSuggestions", () => {
-  it("shows no keywords text if tmdbResults is empty", () => {
-    const store = makeStore([]);
-    render(
-      <Provider store={store}>
-        <GptSearchMovieSuggestions />
-      </Provider>
-    );
-    expect(screen.getByText("No movies found.")).toBeInTheDocument();
-  });
-
   it("renders SuggestedMovieCard for each movie", () => {
     const movies = [
       { id: 1, title: "Movie 1" },

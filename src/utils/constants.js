@@ -33,3 +33,4 @@ export const GPT_INSTRUCTIONS =
 
 export const TRAILER = "Trailer";
 export const NETFLIX_GPT_LOGO = "../../netflix-gpt-title-logo.png";
+export const NO_RESULTS_FOUND = "No results found.";

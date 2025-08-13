@@ -54,7 +54,7 @@ export default function TrailerModal({ movie, setIsOpen }) {
 
         <button
           onClick={() => setIsOpen(false)}
-          className="mt-6 self-end px-4 py-2  bg-red-700 text-white rounded"
+          className="mt-6 self-end px-4 py-2  bg-red-700 text-white rounded hover:cursor-pointer"
         >
           Close
         </button>
