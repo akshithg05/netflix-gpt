@@ -43,14 +43,16 @@
 41. Adding Guardrails to remove offensive comments.
 42. Standardizing errors
 43. Adding clear button for movie search
+44. Responsive sizing
+45. prompt optmization
+46. Added feature to display movie trailer on click of the movie after suggestion.
+47. Added Error route and error element
+48. Added error edge cases
+49. Make netflix GPT logo and add.
 
 # Todo -
 
 1. Add jest unit test cases
-2. Add error element and errorRoute
-3. handle edge cases
-4. Make netflix GPT logo
-5. Movie card pop up and play trailer when card is clicked as a modal (feature)
 
 # Features -
 

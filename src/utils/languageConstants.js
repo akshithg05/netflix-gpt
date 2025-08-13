@@ -36,6 +36,10 @@ const lang = {
     clear: "Clear",
     loading: "Loading...",
     no_trailer_message: "Sorry, No trailer available for this movie",
+    error_page:
+      "Sorry, we can’t find that page. You’ll find loads to explore on the home page.",
+    netflix_home: "NetflixGPT home",
+    no_keywords_text: "No movies matched those keywords!",
   },
   es: {
     search: "Buscar",
@@ -76,6 +80,10 @@ const lang = {
     loading: "Cargando...",
     no_trailer_message:
       "Lo siento, no hay tráiler disponible para esta película",
+    error_page:
+      "Lo sentimos, no podemos encontrar esa página. Encontrarás mucho que explorar en la página principal.",
+    netflix_home: "Inicio de NetflixGPT",
+    no_keywords_text: "¡Ninguna película coincide con esas palabras clave!",
   },
   hi: {
     search: "खोजें",
@@ -114,6 +122,10 @@ const lang = {
     clear: "साफ करें",
     loading: "लोड हो रहा है...",
     no_trailer_message: "क्षमा करें, इस फिल्म का ट्रेलर उपलब्ध नहीं है",
+    error_page:
+      "क्षमा करें, हम उस पेज को नहीं ढूंढ सके। आपको होम पेज पर देखने और खोजने के लिए बहुत कुछ मिलेगा।",
+    netflix_home: "नेटफ्लिक्सजीपीटी होम",
+    no_keywords_text: "उन कीवर्ड्स से मेल खाती कोई फ़िल्म नहीं मिली!",
   },
   kn: {
     search: "ಹುಡುಕಿ",
@@ -152,6 +164,10 @@ const lang = {
     clear: "ನಿಚ್ಚಳ",
     loading: "ಲೋಡಿಂಗ್...",
     no_trailer_message: "ಕ್ಷಮಿಸಿ, ಈ ಚಿತ್ರದ ಟ್ರೈಲರ್ ಲಭ್ಯವಿಲ್ಲ",
+    error_page:
+      "ಕ್ಷಮಿಸಿ, ನಾವು ಆ ಪುಟವನ್ನು ಕಂಡುಕೊಳ್ಳಲಿಲ್ಲ. ನೀವು ಮುಖಪುಟದಲ್ಲಿ ಅನ್ವೇಷಿಸಲು ಸಾಕಷ್ಟು ವಿಷಯಗಳನ್ನು ಕಂಡುಕೊಳ್ಳಬಹುದು.",
+    netflix_home: "ನೆಟ್‌ಫ್ಲಿಕ್ಸ್ಜಿಪಿಟಿ ಮುಖಪುಟ",
+    no_keywords_text: "ಆ ಕೀವರ್ಡ್‌ಗಳಿಗೆ ಹೊಂದುವ ಯಾವುದೇ ಚಿತ್ರಗಳು ಕಂಡುಬಂದಿಲ್ಲ!",
   },
   tn: {
     search: "தேடல்",
@@ -191,6 +207,11 @@ const lang = {
     clear: "சுத்தமான",
     loading: "ஏற்றுகிறது...",
     no_trailer_message: "மன்னிக்கவும், இந்த திரைப்படத்திற்கான டிரெய்லர் இல்லை",
+    error_page:
+      "மன்னிக்கவும், அந்தப் பக்கத்தை கண்டுபிடிக்க முடியவில்லை. முகப்புப் பக்கத்தில் நீங்கள் ஆராய பல உள்ளடக்கங்களை காணலாம்.",
+    netflix_home: "நெட்ஃப்ளிக்ஸ்ஜிபிடி முகப்பு",
+    no_keywords_text:
+      "அந்த முக்கிய வார்த்தைகளுக்கு பொருந்தும் எந்த திரைப்படமும் இல்லை!",
   },
 };
 

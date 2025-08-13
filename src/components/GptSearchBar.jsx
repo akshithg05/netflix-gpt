@@ -5,9 +5,11 @@ import opeanai from "../utils/openai";
 import { API_OPTIONS, GPT_INSTRUCTIONS } from "../utils/constants";
 import { searchMovieTMDBUrl } from "../utils/api";
 import { addSearchedMovies } from "../store/gptSlice";
+import { useNavigate } from "react-router-dom";
 
 export default function GptSearchBar({ setIsLoading, setClear }) {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const searchTerm = useRef(null);
   const language = useSelector((state) => state.language.currentLanguage);
 
@@ -37,7 +39,7 @@ export default function GptSearchBar({ setIsLoading, setClear }) {
       });
 
       if (!response?.output) {
-        // TODO: Handle error case, redirect to error page
+        navigate("/error");
       }
 
       const gptMovies = response?.output?.[0].content?.[0]?.text
@@ -64,12 +66,13 @@ export default function GptSearchBar({ setIsLoading, setClear }) {
         addSearchedMovies({ tmdbResults: tmdbResults, gptMovies: gptMovies })
       );
     } catch (err) {
-      // TODO: Handle error case, redirect to error page
+      navigate("/error");
     } finally {
       setIsLoading(false);
       searchTerm.current.value = "";
     }
   }
+
   return (
     <div className="pt-[10%] flex justify-center">
       <form
